@@ -11,6 +11,10 @@ public class CityNode {
         return location;
     }
 
+    public String getCoordinates() {
+        return location.toString();
+    }
+
     public Building getBuilding() {
         return building;
     }
