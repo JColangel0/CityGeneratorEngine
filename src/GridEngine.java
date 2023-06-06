@@ -15,9 +15,12 @@ public class GridEngine {
         this.width = width;
         this.height = height;
         this.population = population;
-        while (buildings.size() < width * height) {
+        while (buildings.size() < (width * height)) {
             buildings.add(new Library(rand.nextInt(2000) + 500, rand.nextInt(population / 3)));
             buildings.add(new Store(rand.nextDouble() * 1000, rand.nextInt(population)));
+            buildings.add(new Apartment(rand.nextDouble() * 5000, rand.nextInt(8)));
+            buildings.add(new Restaurant(rand.nextInt(400) + 100, rand.nextInt(6) + 16, 3));
+            buildings.add(new Bar(rand.nextInt(100) + 15));
         }
     }
 
