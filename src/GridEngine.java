@@ -12,8 +12,8 @@ public class GridEngine {
     private ArrayList<Building> buildings = new ArrayList<Building>();
 
     public GridEngine(int width, int height, int population) {
-        this.width = width;
-        this.height = height;
+        this.width = width / 4;
+        this.height = height / 4;
         this.population = population;
         while (buildings.size() < (width * height)) {
             buildings.add(new Library(rand.nextInt(2000) + 500, rand.nextInt(population / 3)));
