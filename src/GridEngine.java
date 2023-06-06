@@ -21,13 +21,22 @@ public class GridEngine {
             buildings.add(new Apartment(rand.nextDouble() * 5000, rand.nextInt(8)));
             buildings.add(new Restaurant(rand.nextInt(400) + 100, rand.nextInt(6) + 16, 3));
             buildings.add(new Bar(rand.nextInt(100) + 15));
+            buildings.add(new Hotel(rand.nextInt(61) + 10));
+            buildings.add(new Museum(rand.nextInt(300) + 50, rand.nextInt(1000) + 300));
+            buildings.add(new Bank(rand.nextDouble() * 10000, rand.nextInt(population - 100) + 100));
+            buildings.add(new Hospital(rand.nextInt(population / 4) + 50, rand.nextInt(population / 4) + 50));
+            buildings.add(new Supermarket(rand.nextInt(300) + 100));
+            buildings.add(new Office(rand.nextInt(400) + 100, rand.nextInt(1051) + 50));
+            buildings.add(new FireStation(rand.nextInt(10) + 2));
+            buildings.add(new PostOffice(rand.nextInt(1200) + 100, rand.nextInt(15000) + 300));
         }
     }
 
     public void createGrid() {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
-                grid[i][j] = new CityNode(new Location(i, j), new Building());
+                int buildingID = rand.nextInt(buildings.size());
+                grid[i][j] = new CityNode(new Location(i, j), buildings.get(buildingID));
             }
         }
     }
