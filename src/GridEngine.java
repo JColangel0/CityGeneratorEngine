@@ -19,7 +19,7 @@ public class GridEngine {
             buildings.add(new Library(rand.nextInt(2000) + 500, rand.nextInt(population / 3)));
             buildings.add(new Store(rand.nextDouble() * 1000, rand.nextInt(population)));
             buildings.add(new Apartment(rand.nextDouble() * 5000, rand.nextInt(8)));
-            buildings.add(new Restaurant(rand.nextInt(400) + 100, rand.nextInt(6) + 16, 3));
+            buildings.add(new Restaurant(rand.nextInt(400) + 100, rand.nextInt(6) + 16.0, 3));
             buildings.add(new Bar(rand.nextInt(100) + 15));
             buildings.add(new Hotel(rand.nextInt(61) + 10));
             buildings.add(new Museum(rand.nextInt(300) + 50, rand.nextInt(1000) + 300));
