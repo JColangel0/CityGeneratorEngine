@@ -18,4 +18,8 @@ public class CityNode {
     public Building getBuilding() {
         return building;
     }
+
+    public boolean isEqualTo(CityNode node) {
+        return node.getCoordinates().equals(this.getCoordinates());
+    }
 }

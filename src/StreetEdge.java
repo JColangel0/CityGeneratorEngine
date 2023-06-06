@@ -19,4 +19,8 @@ public class StreetEdge {
     public String toString() {
         return (src.getCoordinates() + " -> " + dest.getCoordinates());
     }
+
+    public boolean isEqualTo(StreetEdge edge) {
+        return (this.src.isEqualTo(edge.getSource()) && this.dest.isEqualTo(edge.getDestination()));
+    }
 }
